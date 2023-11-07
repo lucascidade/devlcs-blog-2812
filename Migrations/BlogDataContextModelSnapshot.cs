@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Blog.Migrations
+namespace devlcsblog2812.Migrations
 {
     [DbContext(typeof(BlogDataContext))]
     partial class BlogDataContextModelSnapshot : ModelSnapshot
