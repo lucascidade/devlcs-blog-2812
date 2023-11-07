@@ -25,6 +25,11 @@ jobs:
           dotnet-version: "7.x"
           include-prerelease: true
 
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Get Current IP Address
         id: ip
         uses: haythem/public-ip@v1.2
