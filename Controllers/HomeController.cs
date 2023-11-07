@@ -11,10 +11,12 @@ namespace Blog.Controllers
             [FromServices] IConfiguration config)
         {
             var env = config.GetValue<string>("Env");
+            var hello = "hello";
             return Ok(new
             {
-                environment = env
-            });
+                environment = env,
+                hello
+            }) ;
         }
     }
 }
