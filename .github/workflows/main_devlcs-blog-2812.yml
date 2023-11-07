@@ -25,6 +25,9 @@ jobs:
           dotnet-version: "7.x"
           include-prerelease: true
 
+      - name: Add IP address to SQL Server
+        run: az sql server firewall-rule create --resource-group blog --server bloga2812server/blog2812 --name ghactions --start-ip-address ${{ steps.ip.outputs.ipv4 }} --end-ip-address ${{ steps.ip.outputs.ipv4 }}
+
       - name: Install EF Tools
         run: dotnet tool install --global dotnet-ef
 
